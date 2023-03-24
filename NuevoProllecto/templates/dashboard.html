@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bienvenido(a) {{ nombres }} {{ apellidos }}</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+  </head>
+  <body>
+    <div>
+    
+    <div class="login-box">
+      <h2>Bienvenido(a) {{ nombres }} {{ apellidos }}</h2>
+      <header>
+        <h1>Farmacias jose</h1>
+      </header>
+        
+    
+      <ul class="menu">
+        <li><a href="Especialidades.html">Especialidades</a></li>
+        <li><a href="Servicios.html">Servicios</a></li>
+        <li><a href="Citas.html">Citas</a></li>
+        <li><a href="/pacientes">Pacientes</a></li>
+        
+
+      </ul>
+    
+      <footer>
+        <p>Jose Manuel Lopez Sanchez <br>
+        Taller de desarrollo 6M       09/Febrero/23</p>
+      </footer>
+      <form action="{{ url_for('logout') }}" method="post">
+        <button type="submit">Cerrar sesión</button>
+      </form>
+    </div>
+
+    <footer>
+      <p>alumno: Jose Manuel Lopez Sanchez
+        Grupo: 6°M 
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Examen</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+  </head>
+  <body>
+    <div>
+      <img src="{{ url_for('static', filename='unach.jpg') }}" alt="logo" style="max-width: 50%; height: auto;">
+    </div>
+    
+    <div class="login-box">
+      <h2>Iniciar sesión</h2>
+      <form action="{{ url_for('login') }}" method="POST">
+        <div class="user-box">
+          <input type="text" name="correo" required="">
+          <label>correo</label>
+        </div>
+        <div class="user-box">
+          <input type="password" name="contraseña" required="">
+          <label>Contraseña</label>
+        </div>
+        <div class="button-box">
+          <button type="submit">Iniciar sesión</button>
+        </div>
+      </form>
+      <div class="text-center">
+        <p>No tienes una cuenta?</p>
+        <a href="{{ url_for('registro') }}">Regístrate aquí</a>
+      </div>
+    </div>
+  </body>
+</html>
